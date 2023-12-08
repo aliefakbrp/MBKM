@@ -1,0 +1,166 @@
+{% extends "main_layout.html" %} {% block content %}
+<section id="rekomendasi" class="s-services ss-dark target-section">
+    <div class="shadow-overlay"></div>
+
+    <div class="row heading-block heading-block--center" data-aos="fade-up">
+        <div class="column large-full">
+            <h2 class="section-heading section-heading--centerbottom">Rekomendasi Film</h2>
+
+            <p class="section-desc">10 Rekomendasi Film untuk Kamu Tonton</p>
+        </div>
+    </div>
+    <!-- end heading-block -->
+
+    <!-- <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div> -->
+
+    <div class="row services-list block-large-1-5 block-medium-1-2 block-tab-full">
+        <!-- dropdown -->
+        {% for i in films %}
+        <div class="column item-service" data-aos="fade-up">
+            <div class="item-service__content">
+                <h4 class="item-title">{{ i }}</h4>
+                <p>keterangan film.</p>
+            </div>
+        </div>
+        {% endfor %}
+        <form action="rekomendasi" method="get" style="color: aliceblue">
+            <label for="cars" style="background-color: aqua; color: blue">Choose a car:</label>
+            <select name="user" id="user" style="background-color: aqua; color: blue">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <select name="tetangga" id="tetangga">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <br /><br />
+            <input type="submit" value="Submit" />
+        </form>
+
+        <!-- <div class="column item-service" data-aos="fade-up">
+                    <div class="item-service__content">
+                        <h4 class="item-title">Toy Story</h4>
+                        <p>
+                            keterangan film.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column item-service" data-aos="fade-up">
+                    <div class="item-service__content">
+                        <h4 class="item-title">Toy Story2</h4>
+                        <p>
+                            keterangan film.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column item-service" data-aos="fade-up">
+                    <div class="item-service__content">
+                        <h4 class="item-title">Toy Story 3</h4>
+                        <p>
+                            keterangan film.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column item-service" data-aos="fade-up">
+                    <div class="item-service__content">
+                        <h4 class="item-title">the Nun</h4>
+                        <p>
+                            keterangan film.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column item-service" data-aos="fade-up">
+                    <div class="item-service__content">
+                        <h4 class="item-title">The nun 2</h4>
+                        <p>
+                            keterangan film.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column item-service" data-aos="fade-up">
+                    <div class="item-service__content">
+                        <h4 class="item-title">The counjuring</h4>
+                        <p>
+                            keterangan film.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column item-service" data-aos="fade-up">
+                    <div class="item-service__content">
+                        <h4 class="item-title">The counjuring 2</h4>
+                        <p>
+                            keterangan film.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column item-service" data-aos="fade-up">
+                    <div class="item-service__content">
+                        <h4 class="item-title">The counjuring 3</h4>
+                        <p>
+                            keterangan film.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column item-service" data-aos="fade-up">
+                    <div class="item-service__content">
+                        <h4 class="item-title">The raid</h4>
+                        <p>
+                            keterangan film.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column item-service" data-aos="fade-up">
+                    <div class="item-service__content">
+                        <h4 class="item-title">The raid 2</h4>
+                        <p>
+                            keterangan film.
+                        </p>
+                    </div>
+                </div> -->
+    </div>
+    <!-- end services-list -->
+</section>
+<!-- end s-services -->
+
+<!-- CTA
+    ================================================== -->
+<section class="s-cta ss-dark">
+    <div class="row heading-block heading-block--center" data-aos="fade-up">
+        <div class="column large-full">
+            <h2 class="section-desc">Selamat Menonton Film yang kami rekomendasikan</h2>
+        </div>
+    </div>
+    <!-- end heading-block -->
+
+    <!-- <div class="row cta-content" data-aos="fade-up">
+                <div class="column large-full">
+                    <p>We highly recommend <a href="https://www.dreamhost.com/r.cgi?287326">DreamHost</a>. Powerful web and Wordpress hosting. Guaranteed. Starting at $2.95 per month.</p>
+
+                    <a href="https://www.dreamhost.com/r.cgi?287326" class="btn full-width">Get Started</a>
+                </div>
+            </div> -->
+    <!-- end ad-content -->
+</section>
+<!-- end s-cta -->
+
+{% endblock %}
